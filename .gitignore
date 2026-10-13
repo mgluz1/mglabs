@@ -1,0 +1,6 @@
+# Sistema
+.DS_Store
+
+# Não usados pelo site (repositório público)
+public/mg/foto.jpeg
+public/mg/eu.txt
