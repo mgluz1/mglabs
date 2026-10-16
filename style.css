@@ -352,6 +352,42 @@ a { color: var(--accent); }
   .lab-card { height: 48px; padding: 8px; }
 }
 
+/* ---------- DIFERENCIAIS ----------
+   Três promessas de marca em cards. Mesmo padrão visual dos passos, sem número vazado. */
+.difs {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 14px;
+}
+@media (min-width: 720px) { .difs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
+
+.dif {
+  padding: clamp(24px, 2.8vw, 32px);
+  border: 1px solid var(--line); border-radius: 20px;
+  background: var(--secondary);
+  transition: border-color .3s var(--ease), box-shadow .3s var(--ease), background-color .3s var(--ease);
+}
+@media (hover: hover) {
+  .dif:hover {
+    background: #fff; border-color: rgba(var(--primary-rgb), .15);
+    box-shadow: 0 18px 40px -22px rgba(var(--primary-rgb), .28);
+  }
+}
+.dif-icone {
+  width: 44px; height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 12px; color: var(--primary);
+  background: #fff; border: 1px solid rgba(var(--primary-rgb), .12);
+  box-shadow: 0 6px 16px -10px rgba(var(--primary-rgb), .4);
+  margin-bottom: 26px;
+}
+.dif-icone svg { width: 22px; height: 22px; }
+.dif-titulo {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.25; letter-spacing: -.015em;
+  margin: 0 0 8px; text-wrap: balance;
+}
+.dif-texto { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
+
 /* ---------- COMO FUNCIONA ----------
    Linha do tempo em cards. Os dois marcos (48h e publicado) ganham o verde da marca:
    são as promessas que a pessoa vai cobrar. */

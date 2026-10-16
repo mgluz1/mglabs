@@ -15,7 +15,7 @@
   // ---------- ENTRADA ESCALONADA POR SCROLL ----------
   // O atributo é aplicado aqui, não no HTML: com JS desligado nada fica invisível.
   if (!semMovimento && temIO) {
-    var alvos = document.querySelectorAll('.etapa, .obra, .sobre-moldura, .sobre-texto');
+    var alvos = document.querySelectorAll('.etapa, .dif, .obra, .sobre-moldura, .sobre-texto');
     var obs = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (e) {
         if (!e.isIntersecting) return;
