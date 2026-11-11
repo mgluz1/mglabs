@@ -1,6 +1,6 @@
 # mglabs
 
-Landing page da **mglabs**: site profissional no ar em 7 dias, a partir de R$ 697, com a primeira versão em 48 horas.
+Landing page da **mglabs**, estúdio de design e desenvolvimento de sites: planos Essencial (R$ 697), Profissional e MGLabs Custom (ambos sob proposta).
 
 ![mglabs — seu site no ar em 7 dias](public/og-image.png)
 
@@ -10,14 +10,14 @@ Site estático em HTML, CSS e JavaScript puro, sem framework e sem etapa de buil
 
 | Seção | O que mostra |
 |---|---|
-| Hero | Oferta, CTAs para o WhatsApp e uma janela animada que monta o site com a linha do tempo Dia 1 → Dia 7 |
-| Como funciona | Os 6 passos em cards, com os marcos (48h e publicado) em destaque |
-| Sites que fiz pra clientes | Portfólio com galeria de prints: [HM2 Aviation](https://hm2aviation.com.br/) e [Moraes Luz Advocacia](https://moraesluzadv.com/) |
-| Preço | O que está incluso, extras com preço fechado e as condições |
-| Pra quem é | Perfis de cliente com destaque rotativo e painel de serviços extras |
-| Atendimento | Atendimento nacional e internacional |
+| Hero | Proposta de valor, CTA "Solicitar meu site" (WhatsApp), preço de entrada em segundo plano e a janela animada que monta o site |
+| Diferenciais | Três promessas de marca |
+| Projetos no ar | Cards com print, segmento, objetivo e solução: [HM2 Aviation](https://hm2aviation.com.br/), [Moraes Luz Advocacia](https://moraesluzadv.com/) e [João Castro Fit](https://joaocastro.fit/) |
+| Planos | Essencial, Profissional (em destaque) e MGLabs Custom, cada um com mensagem própria no WhatsApp, e as condições comerciais (recolhidas no celular) |
+| Do briefing à entrega | As 6 etapas da contratação, com CTA pro briefing |
+| Pra quem é | Perfis de cliente com destaque rotativo |
 | Quem faz | Bio, foto e links do fundador |
-| CTA final | Chamada para o WhatsApp |
+| CTA final | WhatsApp para site ou projeto sob medida |
 
 ## Rodando localmente
 
@@ -39,7 +39,7 @@ public/
   logo-mglabs.png     logo do menu e do rodapé (fundo transparente)
   mark-mglabs.png     símbolo </> usado no CTA final
   og-image.png        imagem que aparece ao compartilhar o link (1200×630)
-  projetos/           prints otimizados do portfólio (.webp)
+  projetos/           prints otimizados do portfólio (.webp); os *-2/*-3 não estão em uso
   mg/                 retrato do "Quem faz"
   project */          prints originais dos projetos (fonte)
 ```
@@ -50,18 +50,17 @@ Os arquivos grandes (`logomglabs.png`, `faviconmglabs.png`, `project */*.png`, `
 
 **Cores e fontes.** Ficam no `:root` do `style.css`. A cor da marca é definida por `--primary`, `--primary-hover` e `--primary-rgb`. As fontes são Space Grotesk (títulos) e Inter (texto), carregadas do Google Fonts.
 
-**Preço.** O valor aparece em vários lugares. Procure por `697` no `index.html`: título da aba, descrição, botão do menu, hero, seção de preço e faixa do "Como funciona". A `public/og-image.png` também traz o preço dentro da imagem e precisa ser gerada de novo.
+**Preços.** Procure por `697` e `Sob proposta` no `index.html` (descrição, hero e cards de `#planos`). As mensagens do WhatsApp de cada plano também citam o valor. A `public/og-image.png` ainda traz o texto antigo ("7 dias") dentro da imagem e precisa ser gerada de novo.
 
 **WhatsApp.** Todos os botões usam `https://wa.me/5562981330312?text=…`, com a mensagem já preenchida (codificada para URL).
 
-**Projetos do portfólio.** Cada projeto é um `<article class="obra">` dentro de `#trabalhos`, com um print principal e dois de detalhe. Para adicionar um projeto:
+**Projetos do portfólio.** Cada projeto é um `<article class="obra-card">` dentro de `#trabalhos`, com um print, segmento, objetivo, solução e link. Para adicionar um projeto:
 
-1. Converta os prints para WebP: 1600 px de largura para o principal e 900 px para os detalhes.
+1. Converta o print da página inicial para WebP com 1200 px de largura:
    ```bash
-   cwebp -q 82 -resize 1600 0 print-principal.png -o public/projetos/projeto-1.webp
-   cwebp -q 80 -resize 900 0 print-detalhe.png -o public/projetos/projeto-2.webp
+   cwebp -q 80 -resize 1200 0 print.png -o public/projetos/projeto-1.webp
    ```
-2. Copie um `<article class="obra">` existente e troque textos, links e imagens. Para a imagem ficar do outro lado, use `obra obra-invertida`.
+2. Copie um `<article class="obra-card">` existente e troque textos, links e imagem.
 
 **Endereço na animação do hero.** Se trocar `seunegocio.com.br`, atualize também o `steps(17, end)` em `.lab-url-texto` no `style.css`. O 17 é o número de caracteres do endereço.
 

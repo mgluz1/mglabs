@@ -12,10 +12,16 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  // ---------- CONDIÇÕES: RECOLHIDAS NO CELULAR ----------
+  // No HTML o <details> vem aberto (sem JS, tudo visível). Em tela estreita,
+  // fecha pra não alongar a página; um toque no título abre.
+  var cond = document.getElementById('condicoes');
+  if (cond && window.matchMedia('(max-width: 760px)').matches) cond.removeAttribute('open');
+
   // ---------- ENTRADA ESCALONADA POR SCROLL ----------
   // O atributo é aplicado aqui, não no HTML: com JS desligado nada fica invisível.
   if (!semMovimento && temIO) {
-    var alvos = document.querySelectorAll('.etapa, .dif, .obra, .sobre-moldura, .sobre-texto');
+    var alvos = document.querySelectorAll('.etapa, .dif, .obra-card, .plano, .cond, .sobre-moldura, .sobre-texto');
     var obs = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (e) {
         if (!e.isIntersecting) return;
@@ -38,7 +44,7 @@
   // ---------- BRILHO QUE SEGUE O CURSOR ----------
   // Coordenadas via variável CSS dentro de requestAnimationFrame, pra não travar o scroll.
   if (!semMovimento && window.matchMedia('(hover: hover)').matches) {
-    Array.prototype.forEach.call(document.querySelectorAll('.obra-shot, .servico'), function (el) {
+    Array.prototype.forEach.call(document.querySelectorAll('.obra-shot, .plano'), function (el) {
       el.classList.add('brilho');
       var pend = null;
       el.addEventListener('mousemove', function (ev) {
