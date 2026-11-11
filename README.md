@@ -1,6 +1,6 @@
 # mglabs
 
-Landing page da **mglabs**, estúdio de design e desenvolvimento de sites: planos Essencial (R$ 697), Profissional (R$ 1.497) e MGLabs Custom (sob proposta).
+Landing page da **mglabs**, estúdio de design e desenvolvimento de sites: planos Essencial (R$ 697), Profissional e MGLabs Custom (ambos sob proposta).
 
 ![mglabs — seu site no ar em 7 dias](public/og-image.png)
 
@@ -50,7 +50,7 @@ Os arquivos grandes (`logomglabs.png`, `faviconmglabs.png`, `project */*.png`, `
 
 **Cores e fontes.** Ficam no `:root` do `style.css`. A cor da marca é definida por `--primary`, `--primary-hover` e `--primary-rgb`. As fontes são Space Grotesk (títulos) e Inter (texto), carregadas do Google Fonts.
 
-**Preços.** Procure por `697` e `1.497` no `index.html` (descrição, hero e cards de `#planos`). As mensagens do WhatsApp de cada plano também citam o valor. A `public/og-image.png` ainda traz o texto antigo ("7 dias") dentro da imagem e precisa ser gerada de novo.
+**Preços.** Procure por `697` e `Sob proposta` no `index.html` (descrição, hero e cards de `#planos`). As mensagens do WhatsApp de cada plano também citam o valor. A `public/og-image.png` ainda traz o texto antigo ("7 dias") dentro da imagem e precisa ser gerada de novo.
 
 **WhatsApp.** Todos os botões usam `https://wa.me/5562981330312?text=…`, com a mensagem já preenchida (codificada para URL).
 
