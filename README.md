@@ -1,6 +1,6 @@
 # mglabs
 
-Landing page da **mglabs**, estúdio de design e desenvolvimento de sites: planos Essencial (R$ 697), Profissional e MGLabs Custom (ambos sob proposta).
+Landing page da **mglabs**, estúdio de design e desenvolvimento de sites: planos Profissional (R$ 697), Completo e MGLabs Custom (os dois últimos sob proposta).
 
 ![mglabs — seu site no ar em 7 dias](public/og-image.png)
 
@@ -13,7 +13,7 @@ Site estático em HTML, CSS e JavaScript puro, sem framework e sem etapa de buil
 | Hero | Proposta de valor, CTA "Solicitar meu site" (WhatsApp), preço de entrada em segundo plano e a janela animada que monta o site |
 | Diferenciais | Três promessas de marca |
 | Projetos no ar | Cards com print, segmento, objetivo e solução: [HM2 Aviation](https://hm2aviation.com.br/), [Moraes Luz Advocacia](https://moraesluzadv.com/) e [João Castro Fit](https://joaocastro.fit/) |
-| Planos | Essencial, Profissional (em destaque) e MGLabs Custom, cada um com mensagem própria no WhatsApp, e as condições comerciais (recolhidas no celular) |
+| Planos | Profissional (em destaque), Completo e MGLabs Custom, cada um com mensagem própria no WhatsApp, e as condições comerciais (recolhidas no celular) |
 | Do briefing à entrega | As 6 etapas da contratação, com CTA pro briefing |
 | Pra quem é | Perfis de cliente com destaque rotativo |
 | Quem faz | Bio, foto e links do fundador |
